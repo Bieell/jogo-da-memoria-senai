@@ -19,7 +19,7 @@
       <div class="content">
 
         <div class="header-content">
-          <img src="img/pokemon/pokebola.png">
+          <img id="logo-site" src="./img/logos/logo-jogo.png">
 
             <div class="header-title">
               <p class="intro">Jogo da Memória</p>
@@ -40,7 +40,7 @@
         </div>
         <div id="flex-center">
           <div class="cartas-temas">
-            <label for="temas">Temas</label>
+            <label for="temas">Temas</label><br>
             <select id="temas" onchange="alteraTema()">
               <option value="none">Selecionar</option>
               <option value="pokemon">Pokémon</option>
@@ -49,16 +49,18 @@
             </select>
           </div>
           <div class="jogo-dificuldade">
-            <label for="dificuldade">Dificuldade</label>
+            <label for="dificuldade">Dificuldade</label><br>
             <select id="dificuldade" onchange="alteraTema()">
               <option value="facil" selected>Fácil</option>
               <option value="medio">Médio</option>
               <option value="dificil">Difícil</option>
             </select>
           </div>
+
+          <strong><span id="contador">Tentativas: </span></strong>
+
         </div>
 
-    
         <div id="cardBoard">
         </div>
 

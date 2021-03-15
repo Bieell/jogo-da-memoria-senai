@@ -1,5 +1,8 @@
 var tamanho
 const cardBoard = document.querySelector("#cardBoard");
+var logo = document.getElementById("logo-site")
+
+var contador = 0
 const pokemon = [
   'abra.png','articuno.png','bulbasauro.png','chansey.png','charmander.png','chikorita.png','clefairy.png','cubone.png','diglett.png','ditto.png','dratini.png','eevee.png','exeggcute.png','gastly.png','geodude.png','growlithe.png','hitmonchan.png', 'hitmonlee.png', 'horsea.png', 'jigglypuff.png', 'jynx.png','koffing.png','krabby.png','lapras.png', 'machop.png','magikarp.png','meowth.png','mewtwo.png', 'moltres.png', 'mrmime.png', 'oddish.png','omanyte.png','onix.png','pikachu.png','poliwag.png','ponyta.png','porygon.png','psyduck.png','rattata.png','seel.png','shellder.png','slowpoke.png','snorlax.png','squirtle.png','staryu.png','tangela.png','vulpix.png','zapdos.png'
 ];
@@ -21,12 +24,21 @@ function alteraTema(){
   switch(tema){
     case "pokemon":
       deck = pokemon;
+      contador = 0
+      document.getElementById("contador").textContent = `Tentativas: ${contador}`
+      logo.src = "./img/logos/logo-pokemon.png"
       break;
     case "lol":
       deck = lol;
+      contador = 0
+      document.getElementById("contador").textContent = `Tentativas: ${contador}`
+      logo.src = "./img/logos/logo-lol.png"
       break;
     case "marvel":
       deck = marvel;
+      contador = 0
+      document.getElementById("contador").textContent = `Tentativas: ${contador}`
+      logo.src = "./img/logos/logo-marvel.png"
       break;
   }
 
@@ -34,17 +46,24 @@ function alteraTema(){
     case "facil":
       dificuldade = 6;
       tamanho = dificuldade;
+      contador = 0
+      document.getElementById("contador").textContent = `Tentativas: ${contador}`
       break;
     case "medio":
       dificuldade = 12;
       tamanho = dificuldade; 
+      contador = 0
+      document.getElementById("contador").textContent = `Tentativas: ${contador}`
       break;
     case "dificil":
       dificuldade = 24;
       tamanho = dificuldade;
+      contador = 0
+      document.getElementById("contador").textContent = `Tentativas: ${contador}`
       break;
   }
   aplicaTema()
+ 
 }
 
 function aplicaTema(){
@@ -114,7 +133,12 @@ function flipCard(){
 function checkForMatch(){
   let isMatch = firstCard.dataset.card === secondCard.dataset.card;
 
-  !isMatch ? disableCards(): resetCards(isMatch);
+  !isMatch ? disableCards(): resetCards(isMatch)
+
+  if(!isMatch || isMatch){
+    contador +=1
+  }
+  document.getElementById("contador").textContent = `Tentativas: ${contador}`
 }
 
 function disableCards(){

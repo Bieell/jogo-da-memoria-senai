@@ -18,6 +18,9 @@ body {
 
 /* Header Section */
 
+#logo-site{
+  width: 100px;
+}
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -107,7 +110,7 @@ a {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0px 0px;
-  background-color: brown;
+  background-color: rgb(72, 19, 121);
 }
 
 .header-content img {
@@ -128,9 +131,9 @@ a {
   border-radius: 0px 0px 10px 10px;
 }
 
-.pokeball {
+/* .pokeball {
   height: 50px;
-}
+} */
 
 .pokeball .line {
   height: 30px;
@@ -140,7 +143,7 @@ a {
   background-color: var(--body);
 }
 
-.pokeball .main-dot {
+/* .pokeball .main-dot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,7 +158,7 @@ a {
   width: 50px;
   border-radius: 50%;
   background-color: whitesmoke;
-}
+} */
 
 /* Main Section */
 
@@ -260,5 +263,11 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  flex-direction: column;
   text-align: center;
+}
+
+#contador{
+  font-size: 35px;
+  color: black;
 }
