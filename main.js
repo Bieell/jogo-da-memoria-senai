@@ -74,9 +74,9 @@ function aplicaTema(){
     for (let i = 0; i < tamanho; i++) {
       cardHTML += `
       <div class="memory-card" data-card="${pokemon[i]}">
-        <img class="front-card" src="img/pokemon/${pokemon[i]}">
+        <img class="front-card" src="./img/pokemon/${pokemon[i]}">
         <div class="back-card">
-        <img class="img-backcard" src="img/pokemon/logo-card.png">
+        <img class="img-backcard" src="./img/pokemon/logo-card.png">
         </div>
       </div>
     `
@@ -88,9 +88,9 @@ else if(deck == lol){
   for (let i = 0; i < tamanho; i++) {
     cardHTML += `
       <div class="memory-card" data-card="${lol[i]}">
-        <img class="front-card" src="img/lol/${lol[i]}">
+        <img class="front-card" src="./img/lol/${lol[i]}">
         <div class="back-card">
-        <img class="img-backcard" src="img/lol/leagueoflegends.png">
+        <img class="img-backcard" src="./img/lol/leagueoflegends.png">
         </div>
       </div>
      `
@@ -100,9 +100,9 @@ else{
   for (let i = 0; i < tamanho; i++) {
     cardHTML += `
       <div class="memory-card" data-card="${marvel[i]}">
-        <img class="front-card" src="img/marvel/${marvel[i]}">
+        <img class="front-card" src="./img/marvel/${marvel[i]}">
         <div class="back-card">
-        <img class="img-backcard" src="img/marvel/marvel.png">
+        <img class="img-backcard" src="./img/marvel/marvel.png">
         </div>
       </div>
      `
